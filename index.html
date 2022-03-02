@@ -25,7 +25,7 @@
         color: #333;
         font-size: 0.9rem;
         margin: auto;
-        text-align: left;
+        text-align: center;
         line-height: 1.5;
       }
 
@@ -56,6 +56,11 @@
 
       /* Classes */
 
+      .highlight {
+        font-weight: bold;
+        font-size: 1.1em;
+      }
+
       .main {
         max-width: 800px;
         margin: 0 auto;
@@ -63,7 +68,7 @@
 
       .document {
         background-color: #fff;
-        padding: 10px 4rem;
+        padding: 20px 4rem 10px 4rem;
         margin: 1rem 0;
         border-radius: 5px;
         position: relative;
@@ -73,16 +78,14 @@
         page-break-after: always;
       }
 
-      .nextschool-logo {
-        position: absolute;
-        top: 1rem;
-        right: 2rem;
+      .brand-logos {
+        display: flex;
+        justify-content: space-between;
       }
 
-      .school-logo {
-        display: block;
-        margin: 0 auto;
-        margin-top: 1rem;
+      .before-table {
+        display: flex;
+        gap: 1rem;
       }
 
       .title {
@@ -91,25 +94,34 @@
         text-underline-offset: 4px;
         font-size: 1.2rem;
         color: #111;
-        margin: 10px 0;
+        margin: 15px 0;
       }
 
       .app-link {
-        font-size: 1rem;
+        padding-top: 5px;
+        font-size: 0.9rem;
+        line-height: 1.6;
+        color: #444;
+        text-align: center;
         margin: 10px 0;
+        font-weight: normal;
       }
 
       .app-link a {
         font-weight: normal;
+        display: block;
+        margin-top: 10px;
+        font-weight: bold;
+        text-align: center;
       }
 
       .stores {
-        display: flex;
+        display: grid;
+        grid-template-columns: 1fr;
         justify-content: center;
-      }
-
-      .stores a:nth-child(2) {
-        margin: 0 1rem;
+        align-items: center;
+        align-content: center;
+        gap: 10px;
       }
     </style>
   </head>
@@ -117,59 +129,67 @@
   <body>
     <main class="main">
       <div class="document">
-        <img
-          class="nextschool-logo"
-          src="https://schoolmanagement.co.za/sms/public/uploads/settings/8967914b0e044c92cbb39557beb8f1d6.png"
-          alt="nextschool-brand-logo"
-          height="30px"
-        />
-
-        <img
-          class="school-logo"
-          src="https://mveledzandivhoprimary.co.za/public/uploads/settings/ac002a07de87fe00e6e93c3368a97982.png"
-          alt="school-logo"
-          height="55px"
-        />
+        <div class="brand-logos">
+          <img
+            class="school-logo"
+            src="https://mveledzandivhoprimary.co.za/public/uploads/settings/ac002a07de87fe00e6e93c3368a97982.png"
+            alt="school-logo"
+            height="40px"
+          />
+          <img
+            class="nextschool-logo"
+            src="https://schoolmanagement.co.za/sms/public/uploads/settings/8967914b0e044c92cbb39557beb8f1d6.png"
+            alt="nextschool-brand-logo"
+            height="30px"
+          />
+        </div>
 
         <h3 class="title">
           Our School Digital Platform, School Website and School Mobile App
         </h3>
 
-        <p>
-          Our school is going digital, and we are bringing our school community
-          a suite of digital solutions powered by <strong>NextSchool</strong> -
-          School Digital Platform.
-        </p>
+        <div class="before-table">
+          <div>
+            <p>
+              Our school is going digital, and we are bringing our school
+              community a suite of digital solutions powered by
+              <span class="highlight">NextSchool</span> - School Digital
+              Platform.
+            </p>
 
-        <h3 class="app-link">
-          Download School App Details -
-          <a href="https://mveledzandivhoprimary.co.za/apps"
-            >https://mveledzandivhoprimary.co.za/apps</a
-          >
-        </h3>
-
-        <div class="stores">
-          <a href="">
-            <img
-              src="https://schoolmanagementbooks.s3.af-south-1.amazonaws.com/wp-content/uploads/2022/02/google-play.png"
-              alt="google-play"
-              height="40px"
-            />
-          </a>
-          <a href="">
-            <img
-              src="https://schoolmanagementbooks.s3.af-south-1.amazonaws.com/wp-content/uploads/2022/02/app-store.png"
-              alt="app-store"
-              height="40px"
-            />
-          </a>
-          <a href="">
-            <img
-              src="https://schoolmanagementbooks.s3.af-south-1.amazonaws.com/wp-content/uploads/2022/02/huawei-app-gallery.png"
-              alt="huawei-app-gallery"
-              height="40px"
-            />
-          </a>
+            <h3 class="app-link">
+              <strong>Search & Download</strong>
+              <span class="highlight">- NextSchool</span> from your app store -
+              <br />
+              or from the Link given below <br />
+              <a href="https://mveledzandivhoprimary.co.za/apps"
+                >https://mveledzandivhoprimary.co.za/apps</a
+              >
+            </h3>
+          </div>
+          <div class="stores">
+            <a href="">
+              <img
+                src="https://schoolmanagementbooks.s3.af-south-1.amazonaws.com/wp-content/uploads/2022/02/google-play.png"
+                alt="google-play"
+                height="30px"
+              />
+            </a>
+            <a href="">
+              <img
+                src="https://schoolmanagementbooks.s3.af-south-1.amazonaws.com/wp-content/uploads/2022/02/app-store.png"
+                alt="app-store"
+                height="30px"
+              />
+            </a>
+            <a href="">
+              <img
+                src="https://schoolmanagementbooks.s3.af-south-1.amazonaws.com/wp-content/uploads/2022/02/huawei-app-gallery.png"
+                alt="huawei-app-gallery"
+                height="30px"
+              />
+            </a>
+          </div>
         </div>
 
         <h3>Login Steps</h3>
@@ -177,35 +197,27 @@
         <table>
           <tr>
             <td><strong>1)</strong> Select our school's name</td>
-            <td colspan="2">Mveledzandivho Primary</td>
+            <td><strong>Mveledzandivho Primary</strong></td>
           </tr>
 
           <tr>
             <td><strong>2)</strong> Select Login type</td>
-            <td colspan="2"><strong>Login as Parent</strong></td>
+            <td>Login as Parent</td>
           </tr>
 
           <tr>
-            <td></td>
-            <td><strong>Name</strong></td>
-            <td><strong>Date of Birth</strong></td>
+            <td><strong>3)</strong> Learner Name</td>
+            <td><strong>Learner DOB</strong></td>
           </tr>
 
           <tr>
-            <td><strong>3)</strong> Learner's</td>
-            <td>Learner Name</td>
-            <td>Learner DOB</td>
-          </tr>
-
-          <tr>
-            <td><strong></strong> Your Date of Birth</td>
-            <td>Parent Name</td>
-            <td>Parent DOB</td>
+            <td><strong></strong> Parent Name</td>
+            <td><strong>Parent DOB</strong></td>
           </tr>
 
           <tr>
             <td><strong>4)</strong> PASSCODE (6 Digit)</td>
-            <td colspan="2">546726</td>
+            <td colspan="2"><strong>546726</strong></td>
           </tr>
         </table>
 
@@ -216,59 +228,67 @@
       </div>
 
       <div class="document">
-        <img
-          class="nextschool-logo"
-          src="https://schoolmanagement.co.za/sms/public/uploads/settings/8967914b0e044c92cbb39557beb8f1d6.png"
-          alt="nextschool-brand-logo"
-          height="30px"
-        />
-
-        <img
-          class="school-logo"
-          src="https://mveledzandivhoprimary.co.za/public/uploads/settings/ac002a07de87fe00e6e93c3368a97982.png"
-          alt="school-logo"
-          height="55px"
-        />
+        <div class="brand-logos">
+          <img
+            class="school-logo"
+            src="https://mveledzandivhoprimary.co.za/public/uploads/settings/ac002a07de87fe00e6e93c3368a97982.png"
+            alt="school-logo"
+            height="40px"
+          />
+          <img
+            class="nextschool-logo"
+            src="https://schoolmanagement.co.za/sms/public/uploads/settings/8967914b0e044c92cbb39557beb8f1d6.png"
+            alt="nextschool-brand-logo"
+            height="30px"
+          />
+        </div>
 
         <h3 class="title">
           Our School Digital Platform, School Website and School Mobile App
         </h3>
 
-        <p>
-          Our school is going digital, and we are bringing our school community
-          a suite of digital solutions powered by <strong>NextSchool</strong> -
-          School Digital Platform.
-        </p>
+        <div class="before-table">
+          <div>
+            <p>
+              Our school is going digital, and we are bringing our school
+              community a suite of digital solutions powered by
+              <span class="highlight">NextSchool</span> - School Digital
+              Platform.
+            </p>
 
-        <h3 class="app-link">
-          Download School App Details -
-          <a href="https://mveledzandivhoprimary.co.za/apps"
-            >https://mveledzandivhoprimary.co.za/apps</a
-          >
-        </h3>
-
-        <div class="stores">
-          <a href="">
-            <img
-              src="https://schoolmanagementbooks.s3.af-south-1.amazonaws.com/wp-content/uploads/2022/02/google-play.png"
-              alt="google-play"
-              height="40px"
-            />
-          </a>
-          <a href="">
-            <img
-              src="https://schoolmanagementbooks.s3.af-south-1.amazonaws.com/wp-content/uploads/2022/02/app-store.png"
-              alt="app-store"
-              height="40px"
-            />
-          </a>
-          <a href="">
-            <img
-              src="https://schoolmanagementbooks.s3.af-south-1.amazonaws.com/wp-content/uploads/2022/02/huawei-app-gallery.png"
-              alt="huawei-app-gallery"
-              height="40px"
-            />
-          </a>
+            <h3 class="app-link">
+              <strong>Search & Download</strong>
+              <span class="highlight">- NextSchool</span> from your app store -
+              <br />
+              or from the Link given below <br />
+              <a href="https://mveledzandivhoprimary.co.za/apps"
+                >https://mveledzandivhoprimary.co.za/apps</a
+              >
+            </h3>
+          </div>
+          <div class="stores">
+            <a href="">
+              <img
+                src="https://schoolmanagementbooks.s3.af-south-1.amazonaws.com/wp-content/uploads/2022/02/google-play.png"
+                alt="google-play"
+                height="30px"
+              />
+            </a>
+            <a href="">
+              <img
+                src="https://schoolmanagementbooks.s3.af-south-1.amazonaws.com/wp-content/uploads/2022/02/app-store.png"
+                alt="app-store"
+                height="30px"
+              />
+            </a>
+            <a href="">
+              <img
+                src="https://schoolmanagementbooks.s3.af-south-1.amazonaws.com/wp-content/uploads/2022/02/huawei-app-gallery.png"
+                alt="huawei-app-gallery"
+                height="30px"
+              />
+            </a>
+          </div>
         </div>
 
         <h3>Login Steps</h3>
@@ -276,35 +296,27 @@
         <table>
           <tr>
             <td><strong>1)</strong> Select our school's name</td>
-            <td colspan="2">Mveledzandivho Primary</td>
+            <td><strong>Mveledzandivho Primary</strong></td>
           </tr>
 
           <tr>
             <td><strong>2)</strong> Select Login type</td>
-            <td colspan="2"><strong>Login as Parent</strong></td>
+            <td>Login as Parent</td>
           </tr>
 
           <tr>
-            <td></td>
-            <td><strong>Name</strong></td>
-            <td><strong>Date of Birth</strong></td>
+            <td><strong>3)</strong> Learner Name</td>
+            <td><strong>Learner DOB</strong></td>
           </tr>
 
           <tr>
-            <td><strong>3)</strong> Learner's</td>
-            <td>Learner Name</td>
-            <td>Learner DOB</td>
-          </tr>
-
-          <tr>
-            <td><strong></strong> Your Date of Birth</td>
-            <td>Parent Name</td>
-            <td>Parent DOB</td>
+            <td><strong></strong> Parent Name</td>
+            <td><strong>Parent DOB</strong></td>
           </tr>
 
           <tr>
             <td><strong>4)</strong> PASSCODE (6 Digit)</td>
-            <td colspan="2">546726</td>
+            <td colspan="2"><strong>546726</strong></td>
           </tr>
         </table>
 
@@ -315,59 +327,67 @@
       </div>
 
       <div class="document">
-        <img
-          class="nextschool-logo"
-          src="https://schoolmanagement.co.za/sms/public/uploads/settings/8967914b0e044c92cbb39557beb8f1d6.png"
-          alt="nextschool-brand-logo"
-          height="30px"
-        />
-
-        <img
-          class="school-logo"
-          src="https://mveledzandivhoprimary.co.za/public/uploads/settings/ac002a07de87fe00e6e93c3368a97982.png"
-          alt="school-logo"
-          height="55px"
-        />
+        <div class="brand-logos">
+          <img
+            class="school-logo"
+            src="https://mveledzandivhoprimary.co.za/public/uploads/settings/ac002a07de87fe00e6e93c3368a97982.png"
+            alt="school-logo"
+            height="40px"
+          />
+          <img
+            class="nextschool-logo"
+            src="https://schoolmanagement.co.za/sms/public/uploads/settings/8967914b0e044c92cbb39557beb8f1d6.png"
+            alt="nextschool-brand-logo"
+            height="30px"
+          />
+        </div>
 
         <h3 class="title">
           Our School Digital Platform, School Website and School Mobile App
         </h3>
 
-        <p>
-          Our school is going digital, and we are bringing our school community
-          a suite of digital solutions powered by <strong>NextSchool</strong> -
-          School Digital Platform.
-        </p>
+        <div class="before-table">
+          <div>
+            <p>
+              Our school is going digital, and we are bringing our school
+              community a suite of digital solutions powered by
+              <span class="highlight">NextSchool</span> - School Digital
+              Platform.
+            </p>
 
-        <h3 class="app-link">
-          Download School App Details -
-          <a href="https://mveledzandivhoprimary.co.za/apps"
-            >https://mveledzandivhoprimary.co.za/apps</a
-          >
-        </h3>
-
-        <div class="stores">
-          <a href="">
-            <img
-              src="https://schoolmanagementbooks.s3.af-south-1.amazonaws.com/wp-content/uploads/2022/02/google-play.png"
-              alt="google-play"
-              height="40px"
-            />
-          </a>
-          <a href="">
-            <img
-              src="https://schoolmanagementbooks.s3.af-south-1.amazonaws.com/wp-content/uploads/2022/02/app-store.png"
-              alt="app-store"
-              height="40px"
-            />
-          </a>
-          <a href="">
-            <img
-              src="https://schoolmanagementbooks.s3.af-south-1.amazonaws.com/wp-content/uploads/2022/02/huawei-app-gallery.png"
-              alt="huawei-app-gallery"
-              height="40px"
-            />
-          </a>
+            <h3 class="app-link">
+              <strong>Search & Download</strong>
+              <span class="highlight">- NextSchool</span> from your app store -
+              <br />
+              or from the Link given below <br />
+              <a href="https://mveledzandivhoprimary.co.za/apps"
+                >https://mveledzandivhoprimary.co.za/apps</a
+              >
+            </h3>
+          </div>
+          <div class="stores">
+            <a href="">
+              <img
+                src="https://schoolmanagementbooks.s3.af-south-1.amazonaws.com/wp-content/uploads/2022/02/google-play.png"
+                alt="google-play"
+                height="30px"
+              />
+            </a>
+            <a href="">
+              <img
+                src="https://schoolmanagementbooks.s3.af-south-1.amazonaws.com/wp-content/uploads/2022/02/app-store.png"
+                alt="app-store"
+                height="30px"
+              />
+            </a>
+            <a href="">
+              <img
+                src="https://schoolmanagementbooks.s3.af-south-1.amazonaws.com/wp-content/uploads/2022/02/huawei-app-gallery.png"
+                alt="huawei-app-gallery"
+                height="30px"
+              />
+            </a>
+          </div>
         </div>
 
         <h3>Login Steps</h3>
@@ -375,35 +395,27 @@
         <table>
           <tr>
             <td><strong>1)</strong> Select our school's name</td>
-            <td colspan="2">Mveledzandivho Primary</td>
+            <td><strong>Mveledzandivho Primary</strong></td>
           </tr>
 
           <tr>
             <td><strong>2)</strong> Select Login type</td>
-            <td colspan="2"><strong>Login as Parent</strong></td>
+            <td>Login as Parent</td>
           </tr>
 
           <tr>
-            <td></td>
-            <td><strong>Name</strong></td>
-            <td><strong>Date of Birth</strong></td>
+            <td><strong>3)</strong> Learner Name</td>
+            <td><strong>Learner DOB</strong></td>
           </tr>
 
           <tr>
-            <td><strong>3)</strong> Learner's</td>
-            <td>Learner Name</td>
-            <td>Learner DOB</td>
-          </tr>
-
-          <tr>
-            <td><strong></strong> Your Date of Birth</td>
-            <td>Parent Name</td>
-            <td>Parent DOB</td>
+            <td><strong></strong> Parent Name</td>
+            <td><strong>Parent DOB</strong></td>
           </tr>
 
           <tr>
             <td><strong>4)</strong> PASSCODE (6 Digit)</td>
-            <td colspan="2">546726</td>
+            <td colspan="2"><strong>546726</strong></td>
           </tr>
         </table>
 
@@ -414,59 +426,67 @@
       </div>
 
       <div class="document">
-        <img
-          class="nextschool-logo"
-          src="https://schoolmanagement.co.za/sms/public/uploads/settings/8967914b0e044c92cbb39557beb8f1d6.png"
-          alt="nextschool-brand-logo"
-          height="30px"
-        />
-
-        <img
-          class="school-logo"
-          src="https://mveledzandivhoprimary.co.za/public/uploads/settings/ac002a07de87fe00e6e93c3368a97982.png"
-          alt="school-logo"
-          height="55px"
-        />
+        <div class="brand-logos">
+          <img
+            class="school-logo"
+            src="https://mveledzandivhoprimary.co.za/public/uploads/settings/ac002a07de87fe00e6e93c3368a97982.png"
+            alt="school-logo"
+            height="40px"
+          />
+          <img
+            class="nextschool-logo"
+            src="https://schoolmanagement.co.za/sms/public/uploads/settings/8967914b0e044c92cbb39557beb8f1d6.png"
+            alt="nextschool-brand-logo"
+            height="30px"
+          />
+        </div>
 
         <h3 class="title">
           Our School Digital Platform, School Website and School Mobile App
         </h3>
 
-        <p>
-          Our school is going digital, and we are bringing our school community
-          a suite of digital solutions powered by <strong>NextSchool</strong> -
-          School Digital Platform.
-        </p>
+        <div class="before-table">
+          <div>
+            <p>
+              Our school is going digital, and we are bringing our school
+              community a suite of digital solutions powered by
+              <span class="highlight">NextSchool</span> - School Digital
+              Platform.
+            </p>
 
-        <h3 class="app-link">
-          Download School App Details -
-          <a href="https://mveledzandivhoprimary.co.za/apps"
-            >https://mveledzandivhoprimary.co.za/apps</a
-          >
-        </h3>
-
-        <div class="stores">
-          <a href="">
-            <img
-              src="https://schoolmanagementbooks.s3.af-south-1.amazonaws.com/wp-content/uploads/2022/02/google-play.png"
-              alt="google-play"
-              height="40px"
-            />
-          </a>
-          <a href="">
-            <img
-              src="https://schoolmanagementbooks.s3.af-south-1.amazonaws.com/wp-content/uploads/2022/02/app-store.png"
-              alt="app-store"
-              height="40px"
-            />
-          </a>
-          <a href="">
-            <img
-              src="https://schoolmanagementbooks.s3.af-south-1.amazonaws.com/wp-content/uploads/2022/02/huawei-app-gallery.png"
-              alt="huawei-app-gallery"
-              height="40px"
-            />
-          </a>
+            <h3 class="app-link">
+              <strong>Search & Download</strong>
+              <span class="highlight">- NextSchool</span> from your app store -
+              <br />
+              or from the Link given below <br />
+              <a href="https://mveledzandivhoprimary.co.za/apps"
+                >https://mveledzandivhoprimary.co.za/apps</a
+              >
+            </h3>
+          </div>
+          <div class="stores">
+            <a href="">
+              <img
+                src="https://schoolmanagementbooks.s3.af-south-1.amazonaws.com/wp-content/uploads/2022/02/google-play.png"
+                alt="google-play"
+                height="30px"
+              />
+            </a>
+            <a href="">
+              <img
+                src="https://schoolmanagementbooks.s3.af-south-1.amazonaws.com/wp-content/uploads/2022/02/app-store.png"
+                alt="app-store"
+                height="30px"
+              />
+            </a>
+            <a href="">
+              <img
+                src="https://schoolmanagementbooks.s3.af-south-1.amazonaws.com/wp-content/uploads/2022/02/huawei-app-gallery.png"
+                alt="huawei-app-gallery"
+                height="30px"
+              />
+            </a>
+          </div>
         </div>
 
         <h3>Login Steps</h3>
@@ -474,35 +494,27 @@
         <table>
           <tr>
             <td><strong>1)</strong> Select our school's name</td>
-            <td colspan="2">Mveledzandivho Primary</td>
+            <td><strong>Mveledzandivho Primary</strong></td>
           </tr>
 
           <tr>
             <td><strong>2)</strong> Select Login type</td>
-            <td colspan="2"><strong>Login as Parent</strong></td>
+            <td>Login as Parent</td>
           </tr>
 
           <tr>
-            <td></td>
-            <td><strong>Name</strong></td>
-            <td><strong>Date of Birth</strong></td>
+            <td><strong>3)</strong> Learner Name</td>
+            <td><strong>Learner DOB</strong></td>
           </tr>
 
           <tr>
-            <td><strong>3)</strong> Learner's</td>
-            <td>Learner Name</td>
-            <td>Learner DOB</td>
-          </tr>
-
-          <tr>
-            <td><strong></strong> Your Date of Birth</td>
-            <td>Parent Name</td>
-            <td>Parent DOB</td>
+            <td><strong></strong> Parent Name</td>
+            <td><strong>Parent DOB</strong></td>
           </tr>
 
           <tr>
             <td><strong>4)</strong> PASSCODE (6 Digit)</td>
-            <td colspan="2">546726</td>
+            <td colspan="2"><strong>546726</strong></td>
           </tr>
         </table>
 
@@ -513,59 +525,67 @@
       </div>
 
       <div class="document">
-        <img
-          class="nextschool-logo"
-          src="https://schoolmanagement.co.za/sms/public/uploads/settings/8967914b0e044c92cbb39557beb8f1d6.png"
-          alt="nextschool-brand-logo"
-          height="30px"
-        />
-
-        <img
-          class="school-logo"
-          src="https://mveledzandivhoprimary.co.za/public/uploads/settings/ac002a07de87fe00e6e93c3368a97982.png"
-          alt="school-logo"
-          height="55px"
-        />
+        <div class="brand-logos">
+          <img
+            class="school-logo"
+            src="https://mveledzandivhoprimary.co.za/public/uploads/settings/ac002a07de87fe00e6e93c3368a97982.png"
+            alt="school-logo"
+            height="40px"
+          />
+          <img
+            class="nextschool-logo"
+            src="https://schoolmanagement.co.za/sms/public/uploads/settings/8967914b0e044c92cbb39557beb8f1d6.png"
+            alt="nextschool-brand-logo"
+            height="30px"
+          />
+        </div>
 
         <h3 class="title">
           Our School Digital Platform, School Website and School Mobile App
         </h3>
 
-        <p>
-          Our school is going digital, and we are bringing our school community
-          a suite of digital solutions powered by <strong>NextSchool</strong> -
-          School Digital Platform.
-        </p>
+        <div class="before-table">
+          <div>
+            <p>
+              Our school is going digital, and we are bringing our school
+              community a suite of digital solutions powered by
+              <span class="highlight">NextSchool</span> - School Digital
+              Platform.
+            </p>
 
-        <h3 class="app-link">
-          Download School App Details -
-          <a href="https://mveledzandivhoprimary.co.za/apps"
-            >https://mveledzandivhoprimary.co.za/apps</a
-          >
-        </h3>
-
-        <div class="stores">
-          <a href="">
-            <img
-              src="https://schoolmanagementbooks.s3.af-south-1.amazonaws.com/wp-content/uploads/2022/02/google-play.png"
-              alt="google-play"
-              height="40px"
-            />
-          </a>
-          <a href="">
-            <img
-              src="https://schoolmanagementbooks.s3.af-south-1.amazonaws.com/wp-content/uploads/2022/02/app-store.png"
-              alt="app-store"
-              height="40px"
-            />
-          </a>
-          <a href="">
-            <img
-              src="https://schoolmanagementbooks.s3.af-south-1.amazonaws.com/wp-content/uploads/2022/02/huawei-app-gallery.png"
-              alt="huawei-app-gallery"
-              height="40px"
-            />
-          </a>
+            <h3 class="app-link">
+              <strong>Search & Download</strong>
+              <span class="highlight">- NextSchool</span> from your app store -
+              <br />
+              or from the Link given below <br />
+              <a href="https://mveledzandivhoprimary.co.za/apps"
+                >https://mveledzandivhoprimary.co.za/apps</a
+              >
+            </h3>
+          </div>
+          <div class="stores">
+            <a href="">
+              <img
+                src="https://schoolmanagementbooks.s3.af-south-1.amazonaws.com/wp-content/uploads/2022/02/google-play.png"
+                alt="google-play"
+                height="30px"
+              />
+            </a>
+            <a href="">
+              <img
+                src="https://schoolmanagementbooks.s3.af-south-1.amazonaws.com/wp-content/uploads/2022/02/app-store.png"
+                alt="app-store"
+                height="30px"
+              />
+            </a>
+            <a href="">
+              <img
+                src="https://schoolmanagementbooks.s3.af-south-1.amazonaws.com/wp-content/uploads/2022/02/huawei-app-gallery.png"
+                alt="huawei-app-gallery"
+                height="30px"
+              />
+            </a>
+          </div>
         </div>
 
         <h3>Login Steps</h3>
@@ -573,35 +593,27 @@
         <table>
           <tr>
             <td><strong>1)</strong> Select our school's name</td>
-            <td colspan="2">Mveledzandivho Primary</td>
+            <td><strong>Mveledzandivho Primary</strong></td>
           </tr>
 
           <tr>
             <td><strong>2)</strong> Select Login type</td>
-            <td colspan="2"><strong>Login as Parent</strong></td>
+            <td>Login as Parent</td>
           </tr>
 
           <tr>
-            <td></td>
-            <td><strong>Name</strong></td>
-            <td><strong>Date of Birth</strong></td>
+            <td><strong>3)</strong> Learner Name</td>
+            <td><strong>Learner DOB</strong></td>
           </tr>
 
           <tr>
-            <td><strong>3)</strong> Learner's</td>
-            <td>Learner Name</td>
-            <td>Learner DOB</td>
-          </tr>
-
-          <tr>
-            <td><strong></strong> Your Date of Birth</td>
-            <td>Parent Name</td>
-            <td>Parent DOB</td>
+            <td><strong></strong> Parent Name</td>
+            <td><strong>Parent DOB</strong></td>
           </tr>
 
           <tr>
             <td><strong>4)</strong> PASSCODE (6 Digit)</td>
-            <td colspan="2">546726</td>
+            <td colspan="2"><strong>546726</strong></td>
           </tr>
         </table>
 
